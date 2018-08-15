@@ -85,13 +85,6 @@ img{
 	color: #25bad0;
 	text-decoration: none;
 }
-
-
-
-
-
-
-
 @media screen and (min-width: 769px){/*BIG*/
 	.logo a{
 		font-size: 15pt;

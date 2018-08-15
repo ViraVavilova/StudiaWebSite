@@ -1,11 +1,11 @@
 @font-face {
   font-family: "FontAwesome";
-  src: url("icon-font/fonts/fontawesome-webfont.woff2") format('woff2'),
-  		url("icon-font/fonts/fontawesome-webfont.woff") format('woff'),
-  		url("icon-font/fonts/fontawesome-webfont.eot") format('eot'),
-  		url("icon-font/fonts/fontawesome-webfont.ttf") format('truetype'),
-  		url("icon-font/fonts/fontawesome-webfont.svg") format('svg'),
-  		url("icon-font/fonts/FontAwesome.otf") format('OpenType');
+  src: url("../icon-font/fonts/fontawesome-webfont.woff2") format('woff2'),
+  		url("../icon-font/fonts/fontawesome-webfont.woff") format('woff'),
+  		url("../icon-font/fonts/fontawesome-webfont.eot") format('eot'),
+  		url("../icon-font/fonts/fontawesome-webfont.ttf") format('truetype'),
+  		url("../icon-font/fonts/fontawesome-webfont.svg") format('svg'),
+  		url("../icon-font/fonts/FontAwesome.otf") format('OpenType');
   font-style: normal;
   font-weight: 400;
 }
@@ -55,10 +55,9 @@ img{
 	position: relative;
 }
 .background-image{
-	background-image: url("intro-bg.jpg");
+	background-image: url("../images/intro-bg.jpg");
 	background-position: center;
-	background-color: #cccccc;
-	height: 669px;
+	height: 670px;
 	opacity: 0.2;
 }
 .title{
@@ -70,7 +69,6 @@ img{
 	color: white;
 	padding: 0 3px;
 }
-
 .title h1{
 	margin: 0 auto;
 }
@@ -82,7 +80,6 @@ img{
 	border: 2px solid #25bad0;
 	width: 133px;
 	margin: 35px auto 0 auto;
-
 	line-height: 2.5em;
 }
 .learn-more-button a{
@@ -90,49 +87,35 @@ img{
 	color: #25bad0;
 	text-decoration: none;
 }
-
 @media screen and (min-width: 769px){/*BIG*/
-	.main{
-	background: #2d5358;
-	text-transform: uppercase;
-	padding: 0 48px;
-	overflow: hidden;
-}
-.logo a{
-	display: block;
-	color: white;
-	text-decoration: none;
-	font-size: 15pt;
-	line-height: 4em;
-	float: left;
-}
-img{
-	display: none;
-}
-.menu{
-	display: block;
-	float: right;
-}
-ul{
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
-}
-li {
-	float: left;
-}
-li a{
-	display: block;
-	margin: 0;
-	padding: 0px 15px;
-	text-decoration: none;
-	color: white;
-	font-size: 10.5pt;
-	line-height: 6.5em;
-}
-li a:hover { 
-    color: #bde0e6;
-}
+	.logo a{
+		font-size: 15pt;
+		line-height: 4.5em;
+	}
+	img{
+		display: none;
+	}
+	.menu{
+		display: block;
+	}
+	ul{
+		margin: 0;
+		list-style-type: none;
+	}
+	li {
+		float: left;
+	}
+	li a{
+		display: block;
+		padding: 0px 15px;
+		text-decoration: none;
+		color: white;
+		font-size: 10.5pt;
+		line-height: 6.5em;
+	}
+	li a:hover { 
+	    color: #bde0e6;
+	}
 }
 @media screen and (max-width: 319px){/*SMALLEST*/
 	.container{

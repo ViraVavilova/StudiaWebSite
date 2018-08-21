@@ -37,6 +37,7 @@ body{
 }
 .title h2{
 	text-transform: uppercase;
+	font-weight: 400;
 }
 .main-top{
 	display: flex;
@@ -162,6 +163,7 @@ body{
 	padding: 0 25px;
 	box-sizing: border-box;
 	width: 100%;
+	padding-bottom: 10px;
 }
 .text h3{
 	text-transform: capitalize;
@@ -170,6 +172,40 @@ body{
 .text p{
 	box-sizing: border-box;
 	margin: 0;
+}
+.filter ul{
+	list-style-type: none;
+	margin: 0 auto;
+	padding: 0;
+	width: 50%;
+	display: block;
+}
+.filter ul li a{
+	display: block;
+	text-transform: uppercase;
+	text-align: center;
+	text-decoration: none;
+	padding: 14px 16px;
+	color: #25bad0;
+	float: none;
+	border: 2px solid #25bad0;
+}
+.filter ul li a:active{
+	background-color: #25bad0;
+	color: #2d5358;
+}
+.pictures{
+	margin-top: 10px;
+}
+.pict{
+	width: 100%;
+	max-width: 400px;
+	box-sizing: border-box;
+	padding: 15px;
+	margin: 0 auto;
+}
+.pictures img{
+	width: 100%;
 }
 @media screen and (min-width: 769px){/*BIG*/
 	.title{
@@ -186,14 +222,14 @@ body{
 	.menu{
 		display: block;
 	}
-	ul{
+	.menu ul{
 		margin: 0;
 		list-style-type: none;
 	}
-	li {
+	.menu ul li {
 		float: left;
 	}
-	li a{
+	.menu ul li a{
 		display: block;
 		padding: 0px 15px;
 		text-decoration: none;
@@ -201,7 +237,7 @@ body{
 		font-size: 10.5pt;
 		line-height: 6.5em;
 	}
-	li a:hover { 
+	.menu ul li a:hover { 
 	    color: #bde0e6;
 	}
 	.background-image{
@@ -211,7 +247,7 @@ body{
 		display: none;
 	}
 	.main-title{
-	top: 40%;
+		top: 40%;
 	}
 	.web-design,
 	.app-development,
@@ -223,14 +259,37 @@ body{
 		overflow:hidden;
 	}
 	.image{
-	width: 50%;
-	padding: 0 0 15px 30px;
-	float: left;
+		width: 50%;
+		padding: 0 0 15px 30px;
+		float: left;
 	}
 	.text{
 		padding: 0 auto 0 25px;
 		float: left;
 		width: 50%;
+	}
+	.filter ul{
+		overflow: hidden;
+		width: 100%;
+		margin: 0 auto;
+		display: flex;
+		justify-content: center;
+	}
+	.filter ul li{
+		float: left;
+		padding: 0 15px;
+	}
+	.filter ul li:last-child{
+		padding: 0;
+	}
+	.pictures{
+		clear: both;
+		box-sizing: border-box;	
+		overflow: hidden;
+	}
+	.pict{
+		width: 25%;
+		float: left;
 	}
 @media screen and (max-width: 319px){/*SMALLEST*/
 	.container{

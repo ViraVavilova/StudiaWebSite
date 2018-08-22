@@ -101,13 +101,15 @@ body{
 	color: #25bad0;
 	font-weight: bold;
 }
-.learn-more-button{
+.learn-more-button,
+.send-message{
 	border: 2px solid #25bad0;
 	width: 133px;
 	margin: 35px auto 0 auto;
 	line-height: 2.5em;
 }
-.learn-more-button a{
+.learn-more-button a,
+.send-message a{
 	display: block;
 	color: #25bad0;
 	text-decoration: none;
@@ -138,7 +140,6 @@ body{
 	width: 100%;
 	text-align: center;
 	font-size: 24px;
-
 }
 .web-design,
 .app-development,
@@ -206,6 +207,22 @@ body{
 }
 .pictures img{
 	width: 100%;
+}
+.section-fifth-team{
+	padding-bottom: 50px;
+}
+.team{
+	text-align: center;
+	text-transform: capitalize;
+	padding-top: 30px;
+}
+.team img{
+	border-radius: 50%;
+	width: 50%;
+}
+.team h4{
+	color: #2d5358;
+	margin-bottom: 0;
 }
 @media screen and (min-width: 769px){/*BIG*/
 	.title{
@@ -290,6 +307,16 @@ body{
 	.pict{
 		width: 25%;
 		float: left;
+	}
+	.team{
+		padding: 30px 15px 0 0;
+	}
+	.photos{
+		display: flex;
+		justify-content: center;
+	}
+	.team img{
+		width: 75%;
 	}
 @media screen and (max-width: 319px){/*SMALLEST*/
 	.container{

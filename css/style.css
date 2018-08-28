@@ -14,26 +14,28 @@ body{
 	font-family: "FontAwesome";
 }
 .container{
-	background: #2d5358;
+	background-color: #2d5358;
 	width: 100%;
 }
 .section-first-home{
+	color: #eaeeef;
 	text-transform: uppercase;
 }
 .section-second-services,
 .section-forth-portfolio,
-.section-sixth-contact{
+.section-sixth-contact,
+.footer{
 	color: #25bad0;
 }
 .section-third-about,
 .section-fifth-team{
-	color: #d2eef3;
+	color: #eaeeef;
 	background-color: #25bad0;
 }
 .title{
 	text-align: center;
-	margin: 0 auto;
 	padding: 20px 3px;
+	margin: 0 auto;
 }
 .title h2{
 	text-transform: uppercase;
@@ -57,26 +59,51 @@ body{
 	font-size: 20pt;
 	line-height: 2em;
 }
-.menu-button {
-	padding:0;
+.btn {
 	margin: auto 0 auto auto;
 }
 .menu-button img{
-	display: block;
 	width: 42px;
 	height: 32px;
 	border: 1px solid white;
-	margin: auto;
 }
 .menu{
 	display: none;
+	position: absolute;
+	right: 0;
+	top: 54px;
+	z-index: 1;
+	width: 100%;
+	border-top: 1px solid white;
+	background-color: #2d5358;
 }
+.menu ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+.menu li a{
+	display: block;
+	text-decoration: none;
+	color: white;
+	font-size: 13.5pt;
+	line-height: 3em;
+	padding-left: 5px;
+}
+.menu li a:hover { 
+    color: #bde0e6;
+}
+.btn:hover .menu {
+    display: block;
+ }
 .main-center{
 	position: relative;
 }
 .background-image{
 	background-image: url("../images/intro-bg.jpg");
 	background-position: center;
+	background-size: cover;
 	height: 480px;
 	opacity: 0.2;
 }
@@ -107,16 +134,13 @@ body{
 	width: 133px;
 	margin: 35px auto 0 auto;
 	line-height: 2.5em;
+	text-transform: uppercase;
 }
 .learn-more-button a,
 .send-message a{
 	display: block;
 	color: #25bad0;
 	text-decoration: none;
-}
-.section-second-services{
-	color: #25bad0;
-	overflow: hidden;
 }
 .section-second-services h3{
 	text-transform: uppercase;
@@ -141,13 +165,16 @@ body{
 	text-align: center;
 	font-size: 24px;
 }
+.services-part{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding-bottom: 60px;
+}
 .web-design,
 .app-development,
 .branding,
 .marketing{
-	display: inline-block;
-	float: left;
-	box-sizing: border-box;
 	width: 50%;
 	padding: 0 3px;
 	text-align: center;
@@ -156,15 +183,16 @@ body{
 	width: 100%;
 	box-sizing: border-box;
 	padding: 0 15px;
+	max-width: 600px;
+	margin: 0 auto;
 }
 .image img{
 	width: 100%;
 }
 .text{
-	padding: 0 25px;
+	padding: 0 25px 50px 25px;
 	box-sizing: border-box;
 	width: 100%;
-	padding-bottom: 10px;
 }
 .text h3{
 	text-transform: capitalize;
@@ -188,7 +216,6 @@ body{
 	text-decoration: none;
 	padding: 14px 16px;
 	color: #25bad0;
-	float: none;
 	border: 2px solid #25bad0;
 }
 .filter ul li a:active{
@@ -196,7 +223,7 @@ body{
 	color: #2d5358;
 }
 .pictures{
-	margin-top: 10px;
+	margin: 10px 0 60px 0;
 }
 .pict{
 	width: 100%;
@@ -219,11 +246,60 @@ body{
 .team img{
 	border-radius: 50%;
 	width: 50%;
+	max-width: 225px;
 }
-.team h4{
+.team h3{
 	color: #2d5358;
-	margin-bottom: 0;
 }
+.section-sixth-contact{
+	position: relative;
+    z-index: 1;
+}
+.background-image-contact{
+	position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+	background-image: url("../images/contact-bg.jpg");
+	background-position: center;
+	opacity: 0.2;
+	background-size: cover;
+}
+.form{
+	text-align: center;
+	width: 85%;
+	margin: 0 auto;
+}
+input[type=text], textarea {
+	box-sizing: border-box;
+    padding: 5px 0 5px 10px;
+    margin: 5px;
+    border-radius: 4px;
+    border-width: 0px;
+    width: 100%;
+    opacity: 0.4;
+   }
+textarea {
+	margin-top: 10px; 
+}
+.icons{
+	text-align: center;
+	padding: 50px 0px;
+}
+.fab {
+	color: white;
+	font-style: normal;
+	font-size: 1.5em;
+	padding: 5px 20px;
+	display: inline-block;
+}
+.footer{
+	text-align: center;
+	padding: 20px;
+}
+
 @media screen and (min-width: 769px){/*BIG*/
 	.title{
 		width: 70%;
@@ -231,31 +307,24 @@ body{
 	}
 	.logo a{
 		font-size: 15pt;
-		line-height: 4.5em;
+		line-height: 4.6em;
 	}
 	.menu-button img{
 		display: none;
 	}
 	.menu{
 		display: block;
-	}
-	.menu ul{
-		margin: 0;
-		list-style-type: none;
+		top: 0px;
+		width: auto;
+		border: none;
 	}
 	.menu ul li {
 		float: left;
 	}
 	.menu ul li a{
-		display: block;
 		padding: 0px 15px;
-		text-decoration: none;
-		color: white;
 		font-size: 10.5pt;
 		line-height: 6.5em;
-	}
-	.menu ul li a:hover { 
-	    color: #bde0e6;
 	}
 	.background-image{
 		height: 630px;
@@ -266,11 +335,12 @@ body{
 	.main-title{
 		top: 40%;
 	}
-	.web-design,
-	.app-development,
-	.branding,
-	.marketing{
-		width: 25%;
+	.services{
+		overflow: hidden;
+	}
+	.services-part{
+		width: 50%;
+		float: left;
 	}
 	.third-content{
 		overflow:hidden;
@@ -286,22 +356,17 @@ body{
 		width: 50%;
 	}
 	.filter ul{
-		overflow: hidden;
 		width: 100%;
-		margin: 0 auto;
 		display: flex;
 		justify-content: center;
 	}
 	.filter ul li{
-		float: left;
 		padding: 0 15px;
 	}
 	.filter ul li:last-child{
 		padding: 0;
 	}
 	.pictures{
-		clear: both;
-		box-sizing: border-box;	
 		overflow: hidden;
 	}
 	.pict{
@@ -317,6 +382,18 @@ body{
 	}
 	.team img{
 		width: 75%;
+	}
+	.form{
+		width: 65%;
+	}
+	.name{
+		width: 48%;
+		float: left;
+		margin-right: 10px;
+	}
+	.email{
+		width: 50%;
+		float: left;
 	}
 @media screen and (max-width: 319px){/*SMALLEST*/
 	.container{

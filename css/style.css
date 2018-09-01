@@ -21,15 +21,21 @@ body{
 	color: #eaeeef;
 	text-transform: uppercase;
 }
-.section-second-services,
+.section-second-services p,
 .section-forth-portfolio,
 .section-sixth-contact,
 .footer{
-	color: #25bad0;
+	color: #7d979c;
 }
 .section-third-about,
-.section-fifth-team{
+.section-third-about > .title h2,
+.section-fifth-team,
+.section-fifth-team > .title h2{
 	color: #eaeeef;
+}
+.section-third-about,
+.section-third-about,
+.section-fifth-team{
 	background-color: #25bad0;
 }
 .title{
@@ -40,6 +46,7 @@ body{
 .title h2{
 	text-transform: uppercase;
 	font-weight: 400;
+	color: #25bad0;
 }
 .main-top{
 	display: flex;
@@ -54,7 +61,7 @@ body{
 }
 .logo a{
 	display: block;
-	color: white;
+	color: #7d979c;
 	text-decoration: none;
 	font-size: 20pt;
 	line-height: 2em;
@@ -86,7 +93,7 @@ body{
 .menu li a{
 	display: block;
 	text-decoration: none;
-	color: white;
+	color: #7d979c;
 	font-size: 13.5pt;
 	line-height: 3em;
 	padding-left: 5px;
@@ -105,7 +112,16 @@ body{
 	background-position: center;
 	background-size: cover;
 	height: 480px;
-	opacity: 0.2;
+}
+.background-image:before{
+    content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: -moz-linear-gradient(#0c3c45, #5a797e);
+	opacity: 0.8;
 }
 .main-title{
 	position: absolute;
@@ -144,6 +160,7 @@ body{
 }
 .section-second-services h3{
 	text-transform: uppercase;
+	color: #25bad0;
 }
 .dot {
     height: 100px;
@@ -279,10 +296,14 @@ input[type=text], textarea {
     border-radius: 4px;
     border-width: 0px;
     width: 100%;
-    opacity: 0.4;
+    background-color:rgba(255,255,255,0.2);
    }
 textarea {
 	margin-top: 10px; 
+}
+::placeholder {
+    color: #c0c3c3;
+    opacity: 1;
 }
 .icons{
 	text-align: center;
@@ -299,7 +320,6 @@ textarea {
 	text-align: center;
 	padding: 20px;
 }
-
 @media screen and (min-width: 769px){/*BIG*/
 	.title{
 		width: 70%;
@@ -395,6 +415,10 @@ textarea {
 		width: 50%;
 		float: left;
 	}
+	html, body {
+  	width: 100%;
+  	height: 100%;
+}
 @media screen and (max-width: 319px){/*SMALLEST*/
 	.container{
 		min-width: 320px;
@@ -405,5 +429,8 @@ textarea {
 	.container{
 		max-width: 1280px;
 		margin: 0 auto;
+	}
+	body{
+		background-color: #2d5358;
 	}
 }

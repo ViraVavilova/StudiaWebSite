@@ -4,6 +4,7 @@
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="icon-font/css/font-awesome.min.css">
+	<script type="text/javascript" src ="script/js.js"></script>
 </head>
 <body>
 	<div class = "container">
@@ -12,11 +13,10 @@
 				<div class = "logo">
 					<a href ="#home">Studia</a>
 				</div>
-				<div class="btn">
-					<a class="menu-button" href="#">
-						<img src="images/menu.svg" alt="Button">
-					</a>
-					<div class = "menu">
+				<div class="dropdown">
+					<button onclick="dropDownMenu()"class="dropbtn">
+					</button>
+					<div id="mainDropDownMenu" class = "menu">
 						<ul>
 							<li><a href ="#home">Home</a></li>
 							<li><a href ="#services">Services</a></li>
@@ -25,8 +25,8 @@
 							<li><a href ="#team">Team</a></li>
 							<li><a href ="#contact">Contact</a></li>
 						</ul>
+					</div>
 				</div>
-			</div>
 			</div>
 			<div class="main-center">
 				<a name="home"></a>
@@ -110,23 +110,21 @@
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet volutpat consequat mauris nunc congue nisi. Et magnis dis parturient montes. 
 				</p>	
 			</div>
-			<div class="filter">
-				<ul>
-					<li><a href ="#">All</a></li>
-					<li><a href ="#">Web design</a></li>
-					<li><a href ="#">App development</a></li>
-					<li><a href ="#">Branding</a></li>
-				</ul>
+			<div id="btnContainerPortfolio">
+			  <button class="btn active" onclick="filterSelection('all')">All</button>
+			  <button class="btn" onclick="filterSelection('web_design')">Web design</button>
+			  <button class="btn" onclick="filterSelection('app-development')">App development</button>
+			  <button class="btn" onclick="filterSelection('branding')">Branding</button>
 			</div>
 			<div class="pictures">
-				<div class="pict"><img src="images/portfolio/01-small.jpg"alt="Portfolio by Studia"></div>
-				<div class="pict"><img src="images/portfolio/02-small.jpg"alt="Portfolio by Studia"></div>
-				<div class="pict"><img src="images/portfolio/03-small.jpg"alt="Portfolio by Studia"></div>
-				<div class="pict"><img src="images/portfolio/04-small.jpg"alt="Portfolio by Studia"></div>
-				<div class="pict"><img src="images/portfolio/05-small.jpg"alt="Portfolio by Studia"></div>
-				<div class="pict"><img src="images/portfolio/06-small.jpg"alt="Portfolio by Studia"></div>
-				<div class="pict"><img src="images/portfolio/07-small.jpg"alt="Portfolio by Studia"></div>
-				<div class="pict"><img src="images/portfolio/08-small.jpg"alt="Portfolio by Studia"></div>
+				<div class="pict web_design"><img src="images/portfolio/01-small.jpg"alt="Portfolio by Studia"></div>
+				<div class="pict web_design"><img src="images/portfolio/02-small.jpg"alt="Portfolio by Studia"></div>
+				<div class="pict web_design"><img src="images/portfolio/03-small.jpg"alt="Portfolio by Studia"></div>
+				<div class="pict app-development"><img src="images/portfolio/04-small.jpg"alt="Portfolio by Studia"></div>
+				<div class="pict app-development"><img src="images/portfolio/05-small.jpg"alt="Portfolio by Studia"></div>
+				<div class="pict app-development"><img src="images/portfolio/06-small.jpg"alt="Portfolio by Studia"></div>
+				<div class="pict branding"><img src="images/portfolio/07-small.jpg"alt="Portfolio by Studia"></div>
+				<div class="pict branding"><img src="images/portfolio/08-small.jpg"alt="Portfolio by Studia"></div>
 			</div>
 		</div>
 		<div class="section-fifth-team">

@@ -66,13 +66,19 @@ body{
 	font-size: 20pt;
 	line-height: 2em;
 }
-.btn {
+.dropdown{
 	margin: auto 0 auto auto;
 }
-.menu-button img{
+.dropdown button{
+	background-image: url("../images/menu.svg");
+	background-size: cover;
+	background-position: center;
+	background-color: #2d5358;
 	width: 42px;
 	height: 32px;
-	border: 1px solid white;
+	border: 1px solid #c0c3c3;
+	padding: 0;
+	cursor: pointer;
 }
 .menu{
 	display: none;
@@ -101,8 +107,8 @@ body{
 .menu li a:hover { 
     color: #bde0e6;
 }
-.btn:hover .menu {
-    display: block;
+ .show {
+ 	display:block !important;
  }
 .main-center{
 	position: relative;
@@ -219,23 +225,25 @@ body{
 	box-sizing: border-box;
 	margin: 0;
 }
-.filter ul{
-	list-style-type: none;
-	margin: 0 auto;
-	padding: 0;
-	width: 50%;
-	display: block;
+.btn.active {/*new one*/
+	background-color: #666;
+	color: white;
 }
-.filter ul li a{
-	display: block;
-	text-transform: uppercase;
+#btnContainerPortfolio{
 	text-align: center;
-	text-decoration: none;
+}
+#btnContainerPortfolio button{
+	width: 90%;
 	padding: 14px 16px;
+	background-color: #2d5358;
 	color: #25bad0;
 	border: 2px solid #25bad0;
+	font-family: "FontAwesome";
+	font-size: 1em;
+	text-transform: uppercase;
+	cursor: pointer;
 }
-.filter ul li a:active{
+#btnContainerPortfolio button:active{
 	background-color: #25bad0;
 	color: #2d5358;
 }
@@ -248,6 +256,7 @@ body{
 	box-sizing: border-box;
 	padding: 15px;
 	margin: 0 auto;
+	display: none;
 }
 .pictures img{
 	width: 100%;
@@ -297,6 +306,8 @@ input[type=text], textarea {
     border-width: 0px;
     width: 100%;
     background-color:rgba(255,255,255,0.2);
+    font-family: "FontAwesome";
+    font-size: 1em;
    }
 textarea {
 	margin-top: 10px; 
@@ -329,7 +340,7 @@ textarea {
 		font-size: 15pt;
 		line-height: 4.6em;
 	}
-	.menu-button img{
+	.dropdown button{
 		display: none;
 	}
 	.menu{
@@ -375,16 +386,12 @@ textarea {
 		float: left;
 		width: 50%;
 	}
-	.filter ul{
-		width: 100%;
-		display: flex;
-		justify-content: center;
+	#btnContainerPortfolio button{
+		width: auto;
+		margin: 0 15px;
 	}
-	.filter ul li{
-		padding: 0 15px;
-	}
-	.filter ul li:last-child{
-		padding: 0;
+	#btnContainerPortfolio button:last-child{
+		margin: 0;
 	}
 	.pictures{
 		overflow: hidden;
@@ -419,18 +426,18 @@ textarea {
   	width: 100%;
   	height: 100%;
 }
-@media screen and (max-width: 319px){/*SMALLEST*/
-	.container{
-		min-width: 320px;
-		overflow-x: auto;
+	@media screen and (max-width: 319px){/*SMALLEST*/
+		.container{
+			min-width: 320px;
+			overflow-x: auto;
+		}
 	}
-}
-@media screen and (min-width: 1281px){/*BIGGEST*/
-	.container{
-		max-width: 1280px;
-		margin: 0 auto;
+	@media screen and (min-width: 1281px){/*BIGGEST*/
+		.container{
+			max-width: 1280px;
+			margin: 0 auto;
+		}
+		body{
+			background-color: #2d5358;
+		}
 	}
-	body{
-		background-color: #2d5358;
-	}
-}
